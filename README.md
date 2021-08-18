@@ -7,7 +7,7 @@ UI Kit for helping you in apps development
 ## Screen Shoot
 | UI KIT LIST |  UI KIT GRID              |
 |:------------------:|:----------------------------:|
-|<span align="center"><img width="200px" height="360px" src="docs/image/ss_home_list.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_home_grid.png"></span> |
+|<img width="200px" height="360px" src="docs/image/ss_home_list.png"> | <img width="200px" height="360px" src="docs/image/ss_home_grid.png"> |
 
 
 ## Version Release
