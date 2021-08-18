@@ -1,9 +1,9 @@
 ![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
 
 ## About This Project
-[![](https://jitpack.io/v/amirisback/frogo-ui-kit.svg?style=flat-square)](https://jitpack.io/#amirisback/frogo-ui-kit) <br>
-follow-up project from [frogo-ui-kit](https://github.com/amirisback/frogo-ui-kit)
-UI Kit for helping you in apps development
+[![](https://jitpack.io/v/frogobox/frogo-android-ui-kit.svg?style=flat-square)](https://jitpack.io/#frogobox/frogo-android-ui-kit)
+- Follow-up project from [frogo-ui-kit](https://github.com/amirisback/frogo-ui-kit)
+- UI Kit for helping you in apps development
 
 ## Screen Shoot
 | UI KIT LIST |  UI KIT GRID              |
@@ -14,7 +14,7 @@ UI Kit for helping you in apps development
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.0
+    $version_release = 1.0.1
 
 What's New??
 
@@ -37,8 +37,8 @@ What's New??
 ### Step 2. Add the dependency (build.gradle : Module)
     
     dependencies {
-            // library frogo-ui-kit
-            implementation 'com.github.frogobox:frogo-android-ui-kit:1.1.0'
+            // library frogo-android-ui-kit
+            implementation 'com.github.frogobox:frogo-android-ui-kit:1.0.1'
     }
 
 ## Documentation
@@ -69,3 +69,5 @@ Waiting for your contribute
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
+
+![ScreenShoot Apps](docs/image/mad_score.png?raw=true)
