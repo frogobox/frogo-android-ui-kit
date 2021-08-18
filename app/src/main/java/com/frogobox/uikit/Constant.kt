@@ -1,6 +1,6 @@
-package com.frogobox.appuikit
+package com.frogobox.uikit
 
-import com.frogobox.appuikit.model.Layout
+import com.frogobox.uikit.model.Layout
 
 /*
  * Created by faisalamir on 21/05/21

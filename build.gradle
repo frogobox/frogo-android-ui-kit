@@ -3,14 +3,27 @@ buildscript {
 
     ext {
 
-        versionMajor = 2
-        versionMinor = 1
-        versionPatch = 0
+        // project settings
+        def nameApp = "Frogo Android UI Kit"
 
-        projectCompileSdkVersion = 30
-        projectBuildToolsVersion = "30.0.3"
-        projectMinSdkVersion = 21
-        projectTargetSdkVersion = projectCompileSdkVersion
+        def appDomain = "com"
+        def appDevConsole = "frogobox"
+        def appName = "uikit"
+
+        def versionMajor = 1
+        def versionMinor = 0
+        def versionPatch = 0
+
+        projectCompileSdk = 30
+        projectMinSdk = 21
+        projectTargetSdk = projectCompileSdk
+
+        projectApplicationId = "$appDomain.$appDevConsole.$appName"
+        projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
+        projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
+
+        nameAPK = nameApp.toLowerCase().replace(" ", "-")
+
 
         kotlin_version = "1.5.21"
 

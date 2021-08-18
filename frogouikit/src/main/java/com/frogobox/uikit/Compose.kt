@@ -1,8 +1,8 @@
-package com.frogobox.appuikit.model
+package com.frogobox.uikit
 
 /*
- * Created by faisalamir on 20/05/21
- * FrogoUIKit
+ * Created by faisalamir on 18/08/21
+ * FrogoAndroidUIKit
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -12,9 +12,5 @@ package com.frogobox.appuikit.model
  * All rights reserved
  *
  */
-
-data class Layout(
-    val name: String,
-    val type: String,
-    val layout: Int,
-)
+class Compose {
+}

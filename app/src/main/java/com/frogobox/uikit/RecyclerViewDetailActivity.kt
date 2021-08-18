@@ -1,11 +1,12 @@
-package com.frogobox.appuikit
+package com.frogobox.uikit
 
 import android.os.Bundle
-import com.frogobox.appuikit.Constant.TYPE_GRID
-import com.frogobox.appuikit.Constant.dummyData
-import com.frogobox.appuikit.FrogoRvAdapter.frogoRvAdaper
-import com.frogobox.appuikit.core.BaseActivity
-import com.frogobox.appuikit.model.Layout
+import androidx.core.view.updatePadding
+import com.frogobox.uikit.Constant.TYPE_GRID
+import com.frogobox.uikit.Constant.dummyData
+import com.frogobox.uikit.FrogoRvAdapter.frogoRvAdaper
+import com.frogobox.uikit.core.BaseActivity
+import com.frogobox.uikit.model.Layout
 import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
 

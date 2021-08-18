@@ -1,4 +1,4 @@
-package com.frogobox.frogodesignkit
+package com.frogobox.uikit
 
 import org.junit.Test
 
