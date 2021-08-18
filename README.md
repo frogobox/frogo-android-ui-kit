@@ -2,6 +2,7 @@
 
 ## About This Project
 [![](https://jitpack.io/v/amirisback/frogo-ui-kit.svg?style=flat-square)](https://jitpack.io/#amirisback/frogo-ui-kit) <br>
+follow-up project from [frogo-ui-kit](https://github.com/amirisback/frogo-ui-kit)
 UI Kit for helping you in apps development
 
 ## Screen Shoot
@@ -13,14 +14,12 @@ UI Kit for helping you in apps development
 ## Version Release
 This Is Latest Release
 
-    $version_release = 2.1.0
+    $version_release = 1.0.0
 
 What's New??
 
     * Update Build Gradle Latest Version *
-    * Enchance Performance *
-    * Add: Dimens Value *
-    * Rename Package Name *
+    * Jetpack Compose Support *
 
 ## Download this project
 
@@ -39,13 +38,13 @@ What's New??
     
     dependencies {
             // library frogo-ui-kit
-            implementation 'com.github.amirisback:frogo-ui-kit:2.1.0'
+            implementation 'com.github.frogobox:frogo-android-ui-kit:1.1.0'
     }
 
 ## Documentation
 - Layouts
-    - RecyclerView List [Click Here](https://github.com/amirisback/frogo-ui-kit/blob/master/docs/recyclerview_list.md)
-    - RecyclerView Grid [Click Here](https://github.com/amirisback/frogo-ui-kit/blob/master/docs/recyclerview_grid.md)
+    - RecyclerView List [Click Here](https://github.com/frogobox/frogo-android-ui-kit/blob/master/docs/recyclerview_list.md)
+    - RecyclerView Grid [Click Here](https://github.com/frogobox/frogo-android-ui-kit/blob/master/docs/recyclerview_grid.md)
 - Drawables [Click Here](https://github.com/amirisback/frogo-ui-kit/wiki/Drawable)
 - Dimens [Click Here](https://github.com/amirisback/frogo-ui-kit/wiki/Dimens)
 - Colors [Click Here](https://github.com/amirisback/frogo-ui-kit/wiki/Colors)
