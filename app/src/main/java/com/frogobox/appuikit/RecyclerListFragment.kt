@@ -1,4 +1,4 @@
-package com.frogobox.uikit
+package com.frogobox.appuikit
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.frogobox.uikit.core.BaseFragment
-import com.frogobox.uikit.databinding.FragmentRecyclerListBinding
-import com.frogobox.uikit.model.Layout
+import com.frogobox.appuikit.core.BaseFragment
+import com.frogobox.appuikit.databinding.FragmentRecyclerListBinding
+import com.frogobox.appuikit.model.Layout
 import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
 

@@ -1,4 +1,4 @@
-package com.frogobox.uikit.core
+package com.frogobox.appuikit.core
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

@@ -88,7 +88,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'com.google.code.gson:gson:2.8.6'
 
-    implementation 'com.github.amirisback:frogo-recycler-view:3.8.1'
+    implementation 'com.github.amirisback:frogo-recycler-view:3.8.3'
     implementation project(':frogouikit')
 
     testImplementation 'junit:junit:4.13.2'

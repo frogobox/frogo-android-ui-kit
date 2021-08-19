@@ -31,7 +31,7 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true
+        viewBinding true
         compose true
     }
 
@@ -87,7 +87,7 @@ afterEvaluate {
                 from components.release
 
                 // Library Package Name
-                groupId = "$projectApplicationId"
+                groupId = "$projectLibraryId"
 
                 // Github Repository Name
                 artifactId = "$nameAPK"

@@ -1,4 +1,4 @@
-package com.frogobox.uikit.model
+package com.frogobox.appuikit.model
 
 import android.content.Intent
 

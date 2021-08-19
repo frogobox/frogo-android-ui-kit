@@ -1,4 +1,4 @@
-package com.frogobox.uikit
+package com.frogobox.appuikit
 
 import android.content.Context
 import android.view.View

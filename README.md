@@ -14,7 +14,7 @@
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.2
+    $version_release = 1.0.3
 
 What's New??
 
@@ -38,7 +38,7 @@ What's New??
     
     dependencies {
             // library frogo-android-ui-kit
-            implementation 'com.github.frogobox:frogo-android-ui-kit:1.0.2'
+            implementation 'com.github.frogobox:frogo-android-ui-kit:1.0.3'
     }
 
 ## Documentation

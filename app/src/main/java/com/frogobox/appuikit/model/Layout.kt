@@ -1,4 +1,4 @@
-package com.frogobox.uikit.model
+package com.frogobox.appuikit.model
 
 /*
  * Created by faisalamir on 20/05/21
