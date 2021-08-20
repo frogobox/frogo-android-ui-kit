@@ -5,6 +5,10 @@
 - Follow-up project from [frogo-ui-kit](https://github.com/amirisback/frogo-ui-kit)
 - UI Kit for helping you in apps development
 
+## Migrate from frogo-ui-kit
+- Just renaming package
+- com.frogobox.frogodesignkit >> com.frogobox.uikit
+
 ## Screen Shoot
 | UI KIT LIST |  UI KIT GRID              |
 |:------------------:|:----------------------------:|
