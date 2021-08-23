@@ -5,14 +5,19 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.frogobox.appuikit.core.BaseActivity
+import com.frogobox.appuikit.databinding.ActivityMainBinding
 import com.frogobox.appuikit.model.Main
+import com.frogobox.appuikit.recycler.RecyclerViewActivity
 import com.frogobox.recycler.core.IFrogoViewAdapter
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    override fun setupViewBinding(): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(mainBinding.root)
         setupRecyclerView()
     }
 
@@ -23,7 +28,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupRecyclerView() {
-        mainBinding.frogoRv.injector<Main>()
+         binding.frogoRv.injector<Main>()
             .addCustomView(R.layout.frogo_rv_list_type_1)
             .addData(data())
             .addCallback(object : IFrogoViewAdapter<Main> {

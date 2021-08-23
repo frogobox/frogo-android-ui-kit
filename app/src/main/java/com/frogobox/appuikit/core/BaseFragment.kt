@@ -1,7 +1,11 @@
 package com.frogobox.appuikit.core
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.frogobox.appuikit.databinding.FragmentRecyclerGridBinding
 import com.frogobox.appuikit.databinding.FragmentRecyclerListBinding
 
@@ -17,22 +21,32 @@ import com.frogobox.appuikit.databinding.FragmentRecyclerListBinding
  * All rights reserved
  *
  */
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
-    protected lateinit var mActivity: BaseActivity
+    private var _binding: VB? = null
+    protected val binding: VB get() = _binding!!
 
-    protected var recyclerGridBinding: FragmentRecyclerGridBinding? = null
-    protected var recyclerListBinding: FragmentRecyclerListBinding? = null
+    protected lateinit var mActivity: BaseActivity<*>
+
+    abstract fun setupViewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = setupViewBinding(inflater, container)
+        return binding.root
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mActivity = (activity as BaseActivity)
+        mActivity = (activity as BaseActivity<*>)
     }
 
     override fun onDestroy() {
-        recyclerGridBinding = null
-        recyclerListBinding = null
         super.onDestroy()
+        _binding = null
     }
 
 }

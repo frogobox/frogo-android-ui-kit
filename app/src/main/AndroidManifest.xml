@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".RecyclerViewDetailActivity" />
-        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".recycler.RecyclerViewDetailActivity" />
+        <activity android:name=".recycler.RecyclerViewActivity" />
 
         <activity
             android:name=".MainActivity"

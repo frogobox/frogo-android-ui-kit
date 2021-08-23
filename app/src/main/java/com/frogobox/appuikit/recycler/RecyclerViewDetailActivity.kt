@@ -1,20 +1,24 @@
-package com.frogobox.appuikit
+package com.frogobox.appuikit.recycler
 
 import android.os.Bundle
 import androidx.core.view.updatePadding
-import com.frogobox.appuikit.Constant.TYPE_GRID
-import com.frogobox.appuikit.Constant.dummyData
-import com.frogobox.appuikit.FrogoRvAdapter.frogoRvAdaper
+import com.frogobox.appuikit.recycler.FrogoRvConstant.TYPE_GRID
+import com.frogobox.appuikit.recycler.FrogoRvConstant.dummyData
+import com.frogobox.appuikit.recycler.FrogoRvAdapter.frogoRvAdaper
 import com.frogobox.appuikit.core.BaseActivity
+import com.frogobox.appuikit.databinding.ActivityRecyclerViewDetailBinding
 import com.frogobox.appuikit.model.Layout
 import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
 
-class RecyclerViewDetailActivity : BaseActivity() {
+class RecyclerViewDetailActivity : BaseActivity<ActivityRecyclerViewDetailBinding>() {
+
+    override fun setupViewBinding(): ActivityRecyclerViewDetailBinding {
+        return ActivityRecyclerViewDetailBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(recyclerViewDetailBinding.root)
         setupDetailActivity(extraData().name)
         setupRecyclerView(frogoRv())
     }
@@ -34,7 +38,7 @@ class RecyclerViewDetailActivity : BaseActivity() {
         val dpAsPixels = (16 * scale + 0.5f)
 
         if (extraData().type == TYPE_GRID) {
-            recyclerViewDetailBinding.frogoRv.apply {
+            binding.frogoRv.apply {
                 injector<String>()
                     .addCustomView(extraData().layout)
                     .addCallback(adapter)
@@ -45,7 +49,7 @@ class RecyclerViewDetailActivity : BaseActivity() {
                 updatePadding(left = dpAsPixels.toInt())
             }
         } else {
-            recyclerViewDetailBinding.frogoRv.injector<String>()
+            binding.frogoRv.injector<String>()
                 .addCustomView(extraData().layout)
                 .addCallback(adapter)
                 .addData(dummyData())

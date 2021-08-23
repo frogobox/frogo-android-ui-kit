@@ -1,14 +1,18 @@
-package com.frogobox.appuikit
+package com.frogobox.appuikit.recycler
 
 import android.os.Bundle
 import com.frogobox.appuikit.core.BaseActivity
 import com.frogobox.appuikit.core.BasePagerAdapter
+import com.frogobox.appuikit.databinding.ActivityRecyclerViewBinding
 
-class RecyclerViewActivity : BaseActivity() {
+class RecyclerViewActivity : BaseActivity<ActivityRecyclerViewBinding>() {
+
+    override fun setupViewBinding(): ActivityRecyclerViewBinding {
+        return ActivityRecyclerViewBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(recyclerViewBinding.root)
         setupDetailActivity("List UI RecyclerView")
         setupViewPager()
     }
@@ -18,7 +22,7 @@ class RecyclerViewActivity : BaseActivity() {
         pagerAdapter.setupPagerFragment(RecyclerListFragment(), "List")
         pagerAdapter.setupPagerFragment(RecyclerGridFragment(),"Grid")
 
-        recyclerViewBinding.apply {
+        binding.apply {
             viewpager.adapter = pagerAdapter
             setupTabTitles(tablayout, viewpager, pagerAdapter.titles)
         }

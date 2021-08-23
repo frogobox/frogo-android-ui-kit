@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
 import androidx.viewpager2.widget.ViewPager2
 import com.frogobox.appuikit.databinding.ActivityMainBinding
 import com.frogobox.appuikit.databinding.ActivityRecyclerViewBinding
@@ -24,18 +25,20 @@ import com.google.android.material.tabs.TabLayoutMediator
  * All rights reserved
  *
  */
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
-    protected lateinit var mainBinding: ActivityMainBinding
-    protected lateinit var recyclerViewBinding: ActivityRecyclerViewBinding
-    protected lateinit var recyclerViewDetailBinding: ActivityRecyclerViewDetailBinding
+    protected lateinit var binding: VB
 
-    protected lateinit var mActivity: AppCompatActivity
+    abstract fun setupViewBinding() : VB
+
+    protected val mActivity: AppCompatActivity by lazy {
+        this
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mActivity = this
-        setupViewBinding()
+        binding = setupViewBinding()
+        setContentView(binding.root)
     }
 
     protected fun setupDetailActivity(title: String) {
@@ -66,17 +69,6 @@ abstract class BaseActivity : AppCompatActivity() {
         TabLayoutMediator(tabLayout, viewPager2) { tab: TabLayout.Tab, position: Int ->
             tab.text = titles[position]
         }.attach()
-    }
-
-    private fun setupViewBinding() {
-        // genereate view binding
-        mainBinding = ActivityMainBinding.inflate(baseLayoutInflater())
-        recyclerViewBinding = ActivityRecyclerViewBinding.inflate(baseLayoutInflater())
-        recyclerViewDetailBinding = ActivityRecyclerViewDetailBinding.inflate(baseLayoutInflater())
-    }
-
-    private fun baseLayoutInflater(): LayoutInflater {
-        return LayoutInflater.from(this)
     }
 
 }
