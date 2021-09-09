@@ -46,7 +46,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = '1.8'
         useIR = true
     }
 
@@ -90,7 +90,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'com.google.code.gson:gson:2.8.6'
 
-    implementation 'com.github.amirisback:frogo-recycler-view:3.8.5'
+    implementation 'com.github.amirisback:frogo-recycler-view:3.8.6'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
