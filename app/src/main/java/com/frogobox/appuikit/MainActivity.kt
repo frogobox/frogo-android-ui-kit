@@ -24,6 +24,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun data() : MutableList<Main> {
         val data = mutableListOf<Main>()
         data.add(Main("RecyclerView Layout", Intent(this, RecyclerViewActivity::class.java)))
+        data.add(Main("Compose (Experimental)", Intent(this, ComposeActivity::class.java)))
         return data
     }
 

@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".ComposeActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
         <activity android:name=".recycler.RecyclerViewDetailActivity" />
         <activity android:name=".recycler.RecyclerViewActivity" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -22,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
