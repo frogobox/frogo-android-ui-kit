@@ -1,4 +1,4 @@
-package com.frogobox.uikit.theme
+package com.frogobox.uikit.ui.theme
 
 import androidx.compose.ui.unit.dp
 

@@ -1,4 +1,4 @@
-package com.frogobox.uikit.theme
+package com.frogobox.appuikit.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
