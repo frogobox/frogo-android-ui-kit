@@ -8,12 +8,6 @@ import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import com.frogobox.uikit.ui.theme.Purple700
 import com.frogobox.uikit.ui.theme.dimen_16dp
 import com.frogobox.uikit.ui.theme.dimen_2dp
@@ -31,21 +25,24 @@ import com.frogobox.uikit.ui.theme.dimen_2dp
  *
  */
 
-@Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun FrogoComposeListItemType1() {
-
+fun FrogoComposeListItemType1(
+    dataBuilder: DataBuilder,
+    clickAble: () -> Unit
+) {
     Card(
         Modifier
             .fillMaxWidth()
             .padding(dimen_16dp)
-            .clickable { },
+            .clickable {
+                clickAble()
+            },
         elevation = dimen_2dp
     ) {
         Column(
             modifier = Modifier.padding(dimen_16dp)
         ) {
-            Text(color = Purple700, text = "Amir", maxLines = 1)
+            dataBuilder.textTitle?.let { Text(color = Purple700, text = it, maxLines = 1) }
         }
     }
 

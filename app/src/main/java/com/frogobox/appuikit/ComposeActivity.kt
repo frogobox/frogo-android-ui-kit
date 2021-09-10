@@ -1,5 +1,6 @@
 package com.frogobox.appuikit
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.frogobox.appuikit.model.People
 import com.frogobox.appuikit.ui.theme.FrogoAndroidUIKitTheme
 import com.frogobox.recycler.compose.FrogoLazyColumn
+import com.frogobox.uikit.DataBuilder
 import com.frogobox.uikit.FrogoComposeListItemType1
 
 class ComposeActivity : ComponentActivity() {
@@ -21,8 +23,10 @@ class ComposeActivity : ComponentActivity() {
             FrogoAndroidUIKitTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    FrogoLazyColumn(listData = setupData()) {
-                        FrogoComposeListItemType1()
+                    FrogoLazyColumn(listData = setupData()) { data ->
+                        FrogoComposeListItemType1(DataBuilder(textTitle = data.name)) {
+                            startActivity(Intent(this@ComposeActivity, MainActivity::class.java))
+                        }
                     }
                 }
             }
