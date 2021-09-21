@@ -1,3 +1,0 @@
-include ':frogouikit'
-include ':app'
-rootProject.name = "FrogoAndroidUIKit"
