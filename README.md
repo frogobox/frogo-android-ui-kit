@@ -2,6 +2,9 @@
 
 ## About This Project
 [![](https://jitpack.io/v/frogobox/frogo-android-ui-kit.svg?style=flat-square)](https://jitpack.io/#frogobox/frogo-android-ui-kit)
+[![Scan with Detekt](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/detekt-analysis.yml/badge.svg)](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/detekt-analysis.yml)
+[![Generate APK Debug](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/generate-apk-debug.yml/badge.svg)](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/generate-apk-debug.yml)
+
 - Follow-up project from [frogo-ui-kit](https://github.com/amirisback/frogo-ui-kit)
 - UI Kit for helping you in apps development
 
@@ -18,31 +21,56 @@
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.4
+    $version_release = 1.0.5
 
 What's New??
 
     * Update Build Gradle Latest Version *
     * Jetpack Compose Support *
+    * build.gradle.kts / Kotlin DSL *
 
 ## Download this project
 
 ### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
-    
-    Add it in your root build.gradle at the end of repositories:
-    
-    	allprojects {
-    		repositories {
-    			...
-    			maven { url 'https://jitpack.io' }
-    		}
-    	}
+
+#### <Option 1> Groovy Gradle
+
+    // Add it in your root build.gradle at the end of repositories:
+
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+
+#### <Option 2> Kotlin DSL Gradle
+
+```kotlin
+// Add it in your root build.gradle.kts at the end of repositories:
+
+allprojects {
+    repositories {
+        ...
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
       
 ### Step 2. Add the dependency (build.gradle : Module)
-    
+
+#### <Option 1> Groovy Gradle
+
     dependencies {
-            // library frogo-android-ui-kit
-            implementation 'com.github.frogobox:frogo-android-ui-kit:1.0.4'
+        // library frogo-android-ui-kit
+        implementation 'com.github.frogobox:frogo-android-ui-kit:1.0.5'
+    }
+
+#### <Option 2> Kotlin DSL Gradle
+
+    dependencies {
+        // library frogo-android-ui-kit
+        implementation("com.github.frogobox:frogo-android-ui-kit:1.0.5")
     }
 
 ## Documentation
