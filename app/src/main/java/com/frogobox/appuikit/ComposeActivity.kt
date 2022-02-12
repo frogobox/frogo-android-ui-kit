@@ -23,7 +23,7 @@ class ComposeActivity : ComponentActivity() {
             FrogoAndroidUIKitTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    FrogoLazyColumn(listData = setupData()) { data ->
+                    FrogoLazyColumn(setupData()) { data ->
                         FrogoComposeListItemType1(DataBuilder(textTitle = data.name)) {
                             startActivity(Intent(this@ComposeActivity, MainActivity::class.java))
                         }

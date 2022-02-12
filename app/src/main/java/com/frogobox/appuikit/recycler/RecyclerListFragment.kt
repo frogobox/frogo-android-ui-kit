@@ -10,6 +10,7 @@ import com.frogobox.appuikit.R
 import com.frogobox.appuikit.core.BaseFragment
 import com.frogobox.appuikit.databinding.FragmentRecyclerListBinding
 import com.frogobox.appuikit.model.Layout
+import com.frogobox.recycler.core.FrogoRecyclerNotifyListener
 import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
 
@@ -40,9 +41,29 @@ class RecyclerListFragment : BaseFragment<FragmentRecyclerListBinding>() {
             .addCustomView(R.layout.frogo_rv_list_type_1)
             .addData(FrogoRvConstant.dataRvList())
             .addCallback(object : IFrogoViewAdapter<Layout> {
-                override fun onItemClicked(data: Layout) { intentToLayoutSample(data) }
-                override fun onItemLongClicked(data: Layout) {}
-                override fun setupInitComponent(view: View, data: Layout) {
+                override fun onItemClicked(
+                    view: View,
+                    data: Layout,
+                    position: Int,
+                    notifyListener: FrogoRecyclerNotifyListener<Layout>
+                ) {
+                    intentToLayoutSample(data)
+                }
+
+                override fun onItemLongClicked(
+                    view: View,
+                    data: Layout,
+                    position: Int,
+                    notifyListener: FrogoRecyclerNotifyListener<Layout>
+                ) {
+                }
+
+                override fun setupInitComponent(
+                    view: View,
+                    data: Layout,
+                    position: Int,
+                    notifyListener: FrogoRecyclerNotifyListener<Layout>
+                ) {
                     view.findViewById<TextView>(R.id.frogo_rv_list_type_1_tv_title).text = data.name
                 }
             })
