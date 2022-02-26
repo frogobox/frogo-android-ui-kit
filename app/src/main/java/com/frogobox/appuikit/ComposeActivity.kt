@@ -33,7 +33,7 @@ class ComposeActivity : ComponentActivity() {
         }
     }
 
-    fun setupData(): MutableList<People> {
+    private fun setupData(): MutableList<People> {
         val data = mutableListOf<People>()
         data.add(People("Amir", "Programmer"))
         data.add(People("Amir", "Programmer"))
