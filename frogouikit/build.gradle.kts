@@ -76,9 +76,6 @@ dependencies {
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${Dependency.COMPOSE_VERSION}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${Dependency.COMPOSE_VERSION}")
-
 }
 
 afterEvaluate {

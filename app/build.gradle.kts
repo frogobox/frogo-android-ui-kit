@@ -99,7 +99,4 @@ dependencies {
 
     implementation("com.github.amirisback:frogo-recycler-view:4.0.4")
 
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${Dependency.COMPOSE_VERSION}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${Dependency.COMPOSE_VERSION}")
-
 }
