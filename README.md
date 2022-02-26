@@ -3,7 +3,7 @@
 ## About This Project
 [![](https://jitpack.io/v/frogobox/frogo-android-ui-kit.svg?style=flat-square)](https://jitpack.io/#frogobox/frogo-android-ui-kit)
 [![Scan with Detekt](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/detekt-analysis.yml/badge.svg)](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/detekt-analysis.yml)
-[![Generate APK Debug](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/generate-apk-debug.yml/badge.svg)](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/generate-apk-debug.yml)
+[![Generate APK / AAB](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/generate-apk-aab.yml/badge.svg)](https://github.com/frogobox/frogo-android-ui-kit/actions/workflows/generate-apk-aab.yml)
 
 - Follow-up project from [frogo-ui-kit](https://github.com/amirisback/frogo-ui-kit)
 - UI Kit for helping you in apps development
